@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/img/icon.png" type="image/png">
+    <title>Проект на Vue.js</title>
+</head>
+<body>
+    <div id="app">
+        <h2>Найди свою идеальную страну по климату</h2>
+            <div class="questions">
+                <div v-for="(value, index) in values" class="labeles">
+                    <div><label><i>{{ text[index] }}: <b class="value">{{ value }}</b></i></label></div>
+                    <div><input type="range" min="1" max="10" step="1"
+                    v-model.number="values[index]" :value="values[index]"></div>
+                </div>
+            </div>
+            <div class="end">
+                <div class="end_bot">
+                    <h3>Твоя идеальная страна: <b>{{ myCountry }}</b></h3>
+                    <div class="results__img">
+                    <img class="img_bot" :src="'img/'+myCountry+'.png'">
+                    </div>
+                    <p class="end_text">{{ myEndText }}</p>
+                </div>
+            </div>
+    </div>
+    
+
+
+
+
+    <script src="js/vue.global.prod.js"></script>
+    <script src="js/vue-project.js"></script>
+
+</body>
+</html>
