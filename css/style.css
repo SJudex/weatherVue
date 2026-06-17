@@ -10,7 +10,7 @@ font-optical-sizing: auto;
 font-weight: 800;
 font-style: normal;
 background-color: #fff;
-background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url(/img/fon.jpg);
+background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url(../img/fon.jpg);
 height: 100vh;
 background-repeat: no-repeat; 
 background-position: center center; 
