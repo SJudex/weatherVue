@@ -62,3 +62,13 @@ h2{
     width: 15vh;
     height: 15vh;
 }
+.swal2-popup {
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.647);
+}
+.swal2-title {
+  font-size: 18px !important;
+  color: #333 !important;
+  text-align: left !important; /* Выравнивание по левому краю для списков */
+  line-height: 1.4 !important;
+  font-weight: 600 !important;
+}

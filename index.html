@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <title>Проект на Vue.js</title>
 </head>
 <body>
@@ -37,6 +39,23 @@
 
     <script src="js/vue.global.prod.js"></script>
     <script src="js/vue-project.js"></script>
+
+    <script>
+    Swal.fire({
+title: "<b>Инструкция: Оцени каждое утверждение по шкале от 1 до 10, где:</b> <br>•	1 — категорически не согласен / совершенно не подходит. <br>•	5 — нейтрально / безразлично. <br>•	10 — полностью согласен / идеальный вариант.",
+
+showClass: { popup: `
+      animate__animated
+      animate__fadeInUp
+      animate__faster
+    ` },
+  hideClass: { popup: `
+      animate__animated
+      animate__fadeOutDown
+      animate__faster
+    ` }
+});
+    </script>
 
 </body>
 </html>
