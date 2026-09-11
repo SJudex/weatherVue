@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/icon.png">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -15,13 +15,16 @@
 <body>
     <div id="app">
         <h2>Найди свою идеальную страну по климату</h2>
-            <div class="questions">
-                <div v-for="(value, index) in values" class="labeles">
-                    <div><label><i>{{ text[index] }}: <b class="value">{{ value }}</b></i></label></div>
-                    <div><input type="range" min="1" max="10" step="1"
-                    v-model.number="values[index]" :value="values[index]"></div>
+        <div class="questions">
+            <div v-for="(value, index) in values" class="labeles">
+                <div><label><i>{{ text[index] }}</i></label></div>
+                <div class="box">
+                    <input type="range" min="1" max="10" step="1"
+                    v-model.number="values[index]" :value="values[index]">
+                    <b class="value">{{ value }}</b>
                 </div>
             </div>
+        </div>
             <div class="end">
                 <div class="end_bot">
                     <h3>Твоя идеальная страна: <b>{{ myCountry }}</b></h3>
@@ -45,14 +48,14 @@
 title: "<b>Инструкция: Оцени каждое утверждение по шкале от 1 до 10, где:</b> <br>•	1 — категорически не согласен / совершенно не подходит. <br>•	5 — нейтрально / безразлично. <br>•	10 — полностью согласен / идеальный вариант.",
 
 showClass: { popup: `
-      animate__animated
-      animate__fadeInUp
-      animate__faster
+    animate__animated
+    animate__fadeInUp
+    animate__faster
     ` },
-  hideClass: { popup: `
-      animate__animated
-      animate__fadeOutDown
-      animate__faster
+hideClass: { popup: `
+    animate__animated
+    animate__fadeOutDown
+    animate__faster
     ` }
 });
     </script>
