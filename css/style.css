@@ -95,6 +95,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
     position: relative;
 }
 .box {
+    margin-left: 10px;
     display: flex; 
     align-items: center; 
     gap: 10px; 
